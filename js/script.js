@@ -1,5 +1,7 @@
 function init() {
-    console.log('hello world');
+    var userMsg = $('#user-msg').val();
+    console.log(userMsg);
+    
 }
 
 

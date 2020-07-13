@@ -125,7 +125,7 @@ aside #nav-chat #search-bar>a {
  aside #nav-chat #search-bar input {
     font-size: 14px;
     border:none;
-    padding: 3px 10px;
+    padding: 3px 0;
 } 
 
 #user-list {
@@ -170,21 +170,80 @@ aside #nav-chat #search-bar>a {
 /* SEZIONE CHAT PRINCIPALE */
 
 #main-chat {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     width: 70%;
     padding-top: 100px;
     float: right;
     background-image: url(../img/sfondo\ whatsup.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+#chat {
+    width: 70%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chat li {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+}
+
+#chat li>span {
+    padding: 10px 20px;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
+}
+
+#chat li.left {
+    justify-content: flex-start;
+}
+
+#chat li.left>span {
+    background-color: #ffffff;
+}
+
+#chat li.right {
+    justify-content: flex-end;
+}
+
+#chat li.right>span {
+    background-color: #54e611;
 }
 
 /* SEZIONE MESSAGGI */
 
 #my-message {
-    background-color: royalblue;
+    background-color: #d3d2d2;
     position: fixed;
     bottom: 0;
     right: 0;
     width: 70%;
-    min-height: 100px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     z-index: 80;
+}
+
+.f-icon a{
+    font-size: 25px;
+    color: rgb(68, 68, 68);
+}
+
+#user-input {
+    /* padding: 5px 40px; */
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#user-input input {
+    padding: 14px 95px;
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
 }
