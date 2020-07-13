@@ -4,10 +4,10 @@
 
 
 function init() {
-    var userInput = $('#user-msg');
-
+    
     
     $('#invio').click(function(){
+        var userInput = $('#user-msg');
         var txt = userInput.val();
         console.log(txt);
     });
