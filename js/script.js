@@ -1,7 +1,17 @@
+
+
+
+
+
 function init() {
-    var userMsg = $('#user-msg').val();
-    console.log(userMsg);
-    
+
+    var userInput = $('#user-msg');
+    var txt = userInput.val();
+
+    $('#invio').click(function(){
+        console.log(txt);
+    });
+
 }
 
 

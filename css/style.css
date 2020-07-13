@@ -231,12 +231,12 @@ aside #nav-chat #search-bar>a {
 }
 
 .f-icon a{
+    padding: 5px;
     font-size: 25px;
     color: rgb(68, 68, 68);
 }
 
 #user-input {
-    /* padding: 5px 40px; */
     border-radius: 10px;
     background-color: #ffffff;
 }
