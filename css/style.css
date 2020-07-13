@@ -193,7 +193,7 @@ aside #nav-chat #search-bar>a {
     display: flex;
 }
 
-#chat li>span {
+#chat li>.msg {
     padding: 10px 20px;
     border-radius: 8px;
     filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
@@ -212,6 +212,13 @@ aside #nav-chat #search-bar>a {
 }
 
 #chat li.right>span {
+    background-color: #54e611;
+}
+
+.user-mess {
+    padding: 10px 20px;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
     background-color: #54e611;
 }
 
@@ -247,4 +254,8 @@ aside #nav-chat #search-bar>a {
     font-size: 14px;
     border: none;
     border-radius: 50%;
+}
+
+.none {
+    display: none;
 }

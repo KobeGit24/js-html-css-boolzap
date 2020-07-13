@@ -4,12 +4,12 @@
 
 
 function init() {
-    
-    
     $('#invio').click(function(){
-        var userInput = $('#user-msg');
-        var txt = userInput.val();
-        console.log(txt);
+        userInput = $('#user-msg').val();
+        $('#user-msg').val().addClass('user-mess');
+        $('#chat').append(userInput).
+        console.log($('#user-msg').val());
+        $('#user-msg').val("");
     });
 
 }
