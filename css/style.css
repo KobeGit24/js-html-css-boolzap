@@ -143,15 +143,18 @@ aside #nav-chat #search-bar>a {
 .user-item {
     width: 100%;
     padding: 10px;
-    margin: 0 10px 10px;
     border-bottom: 1px solid #949292;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+.user-item:hover {
+    background-color: #868686;
+}
+
 .user-item p {
-    padding: 10px;
+    padding: 5px 15px;
 }
 
 .user-item p:first-of-type {
