@@ -215,12 +215,10 @@ aside #nav-chat #search-bar>a {
     background-color: #54e611;
 }
 
-.user-mess {
-    padding: 10px 20px;
-    border-radius: 8px;
-    filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
-    background-color: #54e611;
+.template {
+    display: none;
 }
+
 
 /* SEZIONE MESSAGGI */
 
