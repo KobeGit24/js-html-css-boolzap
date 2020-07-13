@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100px;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 80;
+}
+
+#user-active {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-img > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* MENU LATERALE */
+
+#nav-chat {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    z-index: 90;
+}
+
+#user-profile {
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 30%;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+#profile-icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#profile-icon > i {
+    width: 15%;
+    font-size: 20px;
+    color: rgb(68, 68, 68);
+}
+
+#profile-img {
+    margin-left: 15px;
+    width: 100%;
+}
+
+/* SEZIONE MESSAGGI */
+
+#my-message {
+    background-color: royalblue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 100px;
+    z-index: 80;
+}
