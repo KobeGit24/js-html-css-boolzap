@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -18,20 +26,40 @@
 }
 
 #user-active {
+    width: 100%;
     display: flex;
     align-items: center;
+}
+
+#user-chat {
+    padding: 0 20px;
+}
+
+#chat-name p:first-of-type {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#chat-name p:last-of-type {
+    padding: 5px;
+    font-size: 14px;
+    color: rgb(68, 68, 68);
 }
 
 .avatar-img > img {
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
+}
+
+#chat-icon> a {
+    margin: 20px;
 }
 
 /* MENU LATERALE */
 
 #nav-chat {
-    background-color: red;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,26 +69,26 @@
 }
 
 #user-profile {
-    border: 1px solid black;
-    position: fixed;
+    border-right: 1px solid #949292;
+    position: absolute;
     top: 0;
-    height: 100px;
-    width: 30%;
+    min-height: 100px;
+    width: 100%;
     background-color: #cccccc;
     display: flex;
     justify-content: space-between;
     align-items: center;   
 }
 
-#profile-icon {
+.h-icon {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-#profile-icon > i {
-    width: 15%;
+.h-icon > a {
+    margin: 12px;
     font-size: 20px;
     color: rgb(68, 68, 68);
 }
@@ -68,6 +96,82 @@
 #profile-img {
     margin-left: 15px;
     width: 100%;
+}
+
+#search {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 100px;
+    padding: 15px;
+    background-color: #bdbcbc;
+}
+
+#search-bar {
+    padding: 12px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 2px #888888;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside #nav-chat #search-bar>a {
+    color: rgb(68, 68, 68);
+    padding: 0 20px;
+}
+ 
+ aside #nav-chat #search-bar input {
+    font-size: 14px;
+    border:none;
+    padding: 3px 10px;
+} 
+
+#user-list {
+    height: 800px;
+    position: relative;
+    margin-top: 178px; 
+    list-style: none;
+    background-color: #bdbcbc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.user-item {
+    width: 100%;
+    padding: 10px;
+    margin: 0 10px 10px;
+    border-bottom: 1px solid #949292;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-item p {
+    padding: 10px;
+}
+
+.user-item p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-item:last-child {
+    margin-bottom: 40px;
+    border-bottom: none;
+}
+
+/* SEZIONE CHAT PRINCIPALE */
+
+#main-chat {
+    height: calc(100vh - 100px);
+    width: 70%;
+    padding-top: 100px;
+    float: right;
+    background-image: url(../img/sfondo\ whatsup.jpg);
 }
 
 /* SEZIONE MESSAGGI */
@@ -78,6 +182,6 @@
     bottom: 0;
     right: 0;
     width: 70%;
-    height: 100px;
+    min-height: 100px;
     z-index: 80;
 }
