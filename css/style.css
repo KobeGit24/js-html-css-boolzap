@@ -151,6 +151,7 @@ aside #nav-chat #search-bar>a {
 
 .user-item:hover {
     background-color: #868686;
+    cursor: pointer;
 }
 
 .user-item p {
