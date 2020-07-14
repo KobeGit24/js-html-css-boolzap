@@ -55,9 +55,7 @@ a {
 
 #chat-icon> a {
     margin: 20px;
-}
-
-/* MENU LATERALE */
+} 
 
 #nav-chat {
     position: fixed;
@@ -118,14 +116,16 @@ a {
 }
 
 aside #nav-chat #search-bar>a {
+    width: 30%;
     color: rgb(68, 68, 68);
     padding: 0 20px;
 }
  
  aside #nav-chat #search-bar input {
+    width: 70%;
     font-size: 14px;
     border:none;
-    padding: 3px 0;
+    padding: 4px 0;
 } 
 
 #user-list {
@@ -154,13 +154,9 @@ aside #nav-chat #search-bar>a {
     cursor: pointer;
 }
 
-.user-item p {
+.user-item p, 
+.user-item h3 {
     padding: 5px 15px;
-}
-
-.user-item p:first-of-type {
-    font-size: 18px;
-    font-weight: 600;
 }
 
 .user-item:last-child {
@@ -168,10 +164,9 @@ aside #nav-chat #search-bar>a {
     border-bottom: none;
 }
 
-/* SEZIONE CHAT PRINCIPALE */
 
 #main-chat {
-    height: calc(100vh - 80px);
+    height: 100vh;
     width: 70%;
     padding-top: 100px;
     float: right;
@@ -192,36 +187,49 @@ aside #nav-chat #search-bar>a {
     width: 100%;
     padding: 30px;
     display: flex;
+    flex-direction: column;
 }
 
-#chat li>.msg {
+#chat .left .msg, 
+#chat .right .msg {
     padding: 10px 20px;
     border-radius: 8px;
     filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
+    display: flex;
+    flex-direction: column;
 }
 
 #chat li.left {
-    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-#chat li.left>span {
+#chat .left .msg .hours {
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 84px;
+}
+
+#chat .right .msg .hours {
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 103px;
+}
+
+#chat li.left>.msg {
     background-color: #ffffff;
 }
 
 #chat li.right {
-    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-#chat li.right>span {
+#chat li.right>.msg {
     background-color: #54e611;
 }
 
 .template {
     display: none;
 }
-
-
-/* SEZIONE MESSAGGI */
 
 #my-message {
     background-color: #cccccc;
@@ -243,18 +251,16 @@ aside #nav-chat #search-bar>a {
 }
 
 #user-input {
+    width: 60%;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 1px 1px 1px 2px #888888;
 }
 
-#user-input input {
-    padding: 14px 95px;
+#user-input input {   
+    width: 100%;
+    padding: 10px 15px;
     font-size: 14px;
     border: none;
     border-radius: 50%;
-}
-
-.none {
-    display: none;
-}
+} 

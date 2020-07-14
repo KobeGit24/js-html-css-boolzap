@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>EX BOOLZAP</title>
@@ -65,32 +64,32 @@
                     <a href="#">
                         <i class="fas fa-search"></i>
                     </a>
-                    <input type="text" placeholder="Cerca nella lista chat">
+                    <input id="search-list" type="text" placeholder="Cerca nella lista chat" onkeyup= "ricercaPerNome()">
                 </div>
             </div>
             <div id="chat-list">
                 <ul id="user-list">
                     <li class="user-item">
-                        <div class="avatar-img">
-                            <img src="img/avatar2.png" alt="">
-                        </div>
-                        <div class="user-info">
-                            <p>
-                                Michele
-                            </p>
-                            <p>
-                                Non poteva essere altrimenti
-                            </p>
-                        </div>
+                      <div class="avatar-img">
+                          <img src="img/avatar2.png" alt="">
+                      </div>
+                      <div class="user-info">
+                          <h3>
+                              Michele
+                          </h3>
+                          <p>
+                              Non poteva essere altrimenti
+                          </p>
+                      </div>
                     </li>
                     <li class="user-item">
                         <div class="avatar-img">
                             <img src="img/avatar3.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Laura
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -101,9 +100,9 @@
                             <img src="img/avatar5.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Luca
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -114,9 +113,9 @@
                             <img src="img/avatar12.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Rosaria
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -127,9 +126,9 @@
                             <img src="img/avatar6.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Raffaele
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -140,9 +139,9 @@
                             <img src="img/avatar11.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Francesca
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -153,9 +152,9 @@
                             <img src="img/avatar7.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Alessandro
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -166,9 +165,9 @@
                             <img src="img/avatar10.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Giovanna
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -179,9 +178,9 @@
                             <img src="img/avatar8.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Fabio
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -192,9 +191,9 @@
                             <img src="img/avatar9.png" alt="">
                         </div>
                         <div class="user-info">
-                            <p>
+                            <h3>
                                 Roberta
-                            </p>
+                            </h3>
                             <p>
                                 Non poteva essere altrimenti
                             </p>
@@ -207,21 +206,35 @@
     <main>
         <div id="main-chat">
             <div class="template">
-                <li id="my-answer">
-                    <span class="msg"></span> 
-                </li> 
-                <li id="com-answer">
-                    <span class="msg">OK!</span> 
-                </li> 
+                <li id="com-answer" class="left">
+                    <div class="msg">
+                        <span> OK!</span> 
+                        <span class="hours"></span>
+                    </div>
+                </li>
+                <li id="my-answer" class="right">
+                    <div class="msg">
+                        <span id="my-msg"></span> 
+                        <span class="hours"></span>
+                    </div>
+                </li>
             </div>
             <ul id="chat">
                 <li class="left">
-                    <span class="msg">Ciao come stai?</span> 
+                    <div class="msg">
+                        <span>
+                            Ciao come stai?
+                        </span> 
+                        <span class="hours"></span>
+                    </div>
                 </li>
                 <li id="right-msg" class="right">
-                    <span class="msg">Tutto bene, grazie!</span> 
+                    <div class="msg">
+                        <span>Tutto bene, grazie!
+                        </span> 
+                        <span class="hours"></span>
+                    </div>
                 </li>
-
             </ul>
         </div>
     </main>
@@ -242,5 +255,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
