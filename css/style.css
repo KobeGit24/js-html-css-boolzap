@@ -125,7 +125,7 @@ aside #nav-chat #search-bar>a {
     width: 70%;
     font-size: 14px;
     border:none;
-    padding: 4px 0;
+    padding: 4px 10px;
 } 
 
 #user-list {
@@ -147,11 +147,11 @@ aside #nav-chat #search-bar>a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 
-.user-item:hover {
-    background-color: #868686;
-    cursor: pointer;
+#chat-list>#user-list>.user-item.active {
+    background-color: #868686; 
 }
 
 .user-item p, 
@@ -203,16 +203,12 @@ aside #nav-chat #search-bar>a {
     align-items: flex-start;
 }
 
+#chat .right .msg .hours,
 #chat .left .msg .hours {
+    display: flex;
+    justify-content: flex-end;
     font-size: 11px;
     margin-top: 3px;
-    margin-left: 84px;
-}
-
-#chat .right .msg .hours {
-    font-size: 11px;
-    margin-top: 3px;
-    margin-left: 103px;
 }
 
 #chat li.left>.msg {
@@ -259,8 +255,20 @@ aside #nav-chat #search-bar>a {
 
 #user-input input {   
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px;
     font-size: 14px;
     border: none;
     border-radius: 50%;
 } 
+
+.f-icon .fa-microphone.hidden {
+    display: none;
+}
+
+.f-icon .fa-chevron-right {
+    display: none;
+}
+
+.f-icon .fa-chevron-right.active {
+    display: block;
+}

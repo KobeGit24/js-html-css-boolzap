@@ -1,8 +1,9 @@
 function init() {
     var time = $('#chat .msg');
     time.find('.hours').append(getActualHours());
-    $('#invio').click(message);
-    $('#user-msg').keyup(press);
+    $('#invio').click(sendMessage);
+    // $('.user-item').click(chooseChat);
+    $('#user-msg').keyup(inputPress);
     nameFind();
 }
 // function
@@ -12,8 +13,8 @@ function getActualHours() {
     return date.getHours() + ':' + date.getMinutes();
 }
 
-function message() {
-        userInput = $('#user-msg').val();
+function sendMessage() {
+        var userInput = $('#user-msg').val();
         var tem = $('.template #my-answer').clone();
         tem.find('#my-msg').append(userInput);
         tem.find('.hours').append(getActualHours());
@@ -24,12 +25,6 @@ function message() {
             $('#chat').append(risp);
         },1000)
         $('#user-msg').val("");
-}
-
-    function press (){
-    if (event.which==13) {
-        message();
-    }
 }
 
 function nameFind(){
@@ -48,5 +43,31 @@ function nameFind(){
         }
     }
 }
+
+function inputPress() {
+    var userInput = $('#user-msg').val();
+    var iconGo = $('#icon-go');
+    var iconPhone = $('#icon-phone');
+    if (event.which==13 && userInput != " " && userInput.length > 0) {
+        message();
+    }
+    if (userInput.length > 0 && userInput != " ") {
+        iconGo.addClass('active');
+        iconPhone.addClass('hidden');
+    } else {
+        iconGo.removeClass('active');
+        iconPhone.removeClass('hidden');
+    }
+}
+
+// function chooseChat() {
+//     $('.user-item').removeClass('active');
+//     $(this).addClass('active'); 
+//     $('#header>.user-item .user-info h3').remove();
+//     var nome = $('#chat-list>#user-list>.user-item.active h3').clone();
+//     var target = $('#header>.user-item').append(nome);
+//     // $('.messaggi').removeClass('active');
+//     // $($('.messaggi').get($(this).index())).addClass('active');
+// }
 
 $(document).ready(init);
