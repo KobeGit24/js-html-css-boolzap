@@ -3,7 +3,7 @@ function init() {
     time.find('.hours').append(getActualHours());
     $('#invio').click(message);
     $('#user-msg').keyup(press);
-    ricercaPerNome();
+    nameFind();
 }
 // function
 
@@ -32,7 +32,7 @@ function message() {
     }
 }
 
-function ricercaPerNome(){
+function nameFind(){
     var search = document.getElementById("search-list");
     var filtro = search.value.toUpperCase();
     var userList = document.getElementById("user-list");
