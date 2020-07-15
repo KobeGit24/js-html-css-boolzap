@@ -21,11 +21,11 @@ function sendMessage() {
         var tem = $('.template #my-answer').clone();
         tem.find('#my-msg').append(userInput);
         tem.find('.hours').append(getActualHours());
-        $('#chat').append(tem);
+        $('.main-chat-user.active #chat').append(tem);
         setTimeout(function(){
             var risp = $('.template #com-answer').clone();
             risp.find('.hours').append(getActualHours());
-            $('#chat').append(risp);
+            $('.main-chat-user.active #chat').append(risp);
         },1000)
         $('#user-msg').val("");
 }
