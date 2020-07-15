@@ -2,9 +2,12 @@ function init() {
     var time = $('#chat .msg');
     time.find('.hours').append(getActualHours());
     $('#invio').click(sendMessage);
-    // $('.user-item').click(chooseChat);
-    $('#user-msg').keyup(inputPress);
+    $('#user-msg').keyup(inputControl);
+    $('.user-item').click(chooseAvatar);
     nameFind();
+    $('#my-answer').on('click', '.msg', function () {
+        $('.delete-msg').addClass('active');
+     });
 }
 // function
 
@@ -44,12 +47,28 @@ function nameFind(){
     }
 }
 
-function inputPress() {
+// SOLUZIONE GIOVANNI sul findName
+// function nameF() {
+//     var input = $(this);
+//     var txt = input.val();
+//     var contacts = $('.contacts .contact');
+//     contacts.each(function(){
+//         var contact = $(this);
+//         var name = contact.find('.contact-name').text();
+//         if (name.toLowerCase().includes(txt.toLowerCase())) {
+//             contact.show();
+//         } else {
+//             contact.hide();
+//         }
+//     });
+// }
+
+function inputControl() {
     var userInput = $('#user-msg').val();
     var iconGo = $('#icon-go');
     var iconPhone = $('#icon-phone');
-    if (event.which==13 && userInput != " " && userInput.length > 0) {
-        message();
+    if (event.which==13 && userInput.length > 0 && userInput != " ") {
+        sendMessage();
     }
     if (userInput.length > 0 && userInput != " ") {
         iconGo.addClass('active');
@@ -60,14 +79,23 @@ function inputPress() {
     }
 }
 
-// function chooseChat() {
-//     $('.user-item').removeClass('active');
-//     $(this).addClass('active'); 
-//     $('#header>.user-item .user-info h3').remove();
-//     var nome = $('#chat-list>#user-list>.user-item.active h3').clone();
-//     var target = $('#header>.user-item').append(nome);
-//     // $('.messaggi').removeClass('active');
-//     // $($('.messaggi').get($(this).index())).addClass('active');
+function chooseAvatar() {
+    $('.user-item').removeClass('active');
+    $(this).addClass('active'); 
+    $('#main-user-info h3').remove();
+    var x = $('.user-item.active .user-info h3').clone();
+    $('#main-user-info').append(x); 
+    $('#main-user>.avatar-img>img').remove();
+    var y = $('.user-item.active .avatar-img>img').clone();
+    $('#main-user>.avatar-img').append(y);
+    $('.main-chat-user').removeClass('active');
+    $($('.main-chat-user').get($('.user-item.active').index())).addClass('active');
+}
+
+// function deleteMessage() {
+//     $('#my-answer').on('click', '.msg', function () {
+//        $('.delete-msg').slideToggle();
+//     });
 // }
 
 $(document).ready(init);

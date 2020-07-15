@@ -25,10 +25,8 @@ a {
     z-index: 80;
 }
 
-#user-active {
-    width: 100%;
-    display: flex;
-    align-items: center;
+#header #main-user .user-info {
+    padding-left: 10px;
 }
 
 #user-chat {
@@ -150,6 +148,14 @@ aside #nav-chat #search-bar>a {
     cursor: pointer;
 }
 
+#main-user{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #chat-list>#user-list>.user-item.active {
     background-color: #868686; 
 }
@@ -165,14 +171,30 @@ aside #nav-chat #search-bar>a {
 }
 
 
-#main-chat {
+/* INIZIO MAIN */
+
+/* #main-chat {
     height: 100vh;
     width: 70%;
     padding-top: 100px;
     float: right;
     background-image: url(../img/sfondo\ whatsup.jpg);
-    display: flex;
+    display: none;
     justify-content: center;
+} */
+
+.main-chat-user {
+    height: 100vh;
+    width: 70%;
+    padding-top: 100px;
+    float: right;
+    background-image: url(../img/sfondo\ whatsup.jpg);
+    display: none;
+    justify-content: center;
+}
+
+.main-chat-user.active {
+    display: flex;
 }
 
 #chat {
@@ -195,6 +217,7 @@ aside #nav-chat #search-bar>a {
     padding: 10px 20px;
     border-radius: 8px;
     filter: drop-shadow(2px 2px 4px rgb(68, 68, 68));
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -206,9 +229,13 @@ aside #nav-chat #search-bar>a {
 #chat .right .msg .hours,
 #chat .left .msg .hours {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     font-size: 11px;
     margin-top: 3px;
+}
+
+.msg .fa-chevron-down {
+    padding: 0 10px;
 }
 
 #chat li.left>.msg {
@@ -225,6 +252,24 @@ aside #nav-chat #search-bar>a {
 
 .template {
     display: none;
+}
+
+.delete-msg {
+    position: absolute;
+    top: 56px;
+    left: -47px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: red;
+    cursor: pointer;
+    display: none;
+}
+
+.delete-msg.active {
+    display: block;
 }
 
 #my-message {
