@@ -44,6 +44,8 @@ a {
     margin: 20px;
 } 
 
+/* INIZIO LISTA CHAT TAG ASIDE */
+
 #nav-chat {
     position: fixed;
     top: 0;
@@ -204,7 +206,7 @@ aside #nav-chat #search-bar>a {
 }
 
 
-/* INIZIO MAIN */
+/* INIZIO PARTE CHAT TAG MAIN */
 
 .main-chat-user {
     height: 100vh;
@@ -290,6 +292,8 @@ aside #nav-chat #search-bar>a {
     cursor: pointer;
     display: none;
 }
+
+/* SEZIONE INPUT PER INVIO MESSAGGI NEL TAG FOOTER */
 
 #my-message {
     background-color: #cccccc;

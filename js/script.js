@@ -5,13 +5,18 @@ function init() {
     nameFind();
     deleteMessage();
 }
-// function
 
+// FUNCTION
+
+
+//funzione che restituisce orario messaggi
 function getActualHours() {
     var date = new Date;
     return date.getHours() + ':' + date.getMinutes();
 }
 
+
+//funzione che controlla l'inserimento e risposta ai messaggi dell'utente
 function sendMessage() {
         var userInput = $('#user-msg').val();
         var tem = $('.template #my-answer').clone();
@@ -26,6 +31,8 @@ function sendMessage() {
         $('#user-msg').val("");
 }
 
+
+//funzione per la ricerca nella lista chat
 function nameFind(){
     var search = document.getElementById("search-list");
     var filtro = search.value.toUpperCase();
@@ -43,6 +50,8 @@ function nameFind(){
     }
 }
 
+
+//funzione per la validazione del messaggio dell'utente e aggiunta del tasto invio per inviare messaggi
 function inputControl() {
     var userInput = $('#user-msg').val();
     var iconGo = $('#icon-go');
@@ -59,6 +68,8 @@ function inputControl() {
     }
 }
 
+
+// funzione che controlla la chat specifica per ogni contatto
 function chooseChat() {
     $('.user-item').removeClass('active');
     $(this).addClass('active'); 
@@ -72,6 +83,8 @@ function chooseChat() {
     $($('.main-chat-user').get($('.user-item.active').index())).addClass('active');
 }
 
+
+//funzione che controlla la cancellazione dei messaggi in chat
 function deleteMessage() {
     $(document).on('click', '.msg', function () {
         $(this).find('.delete-msg').slideToggle();
