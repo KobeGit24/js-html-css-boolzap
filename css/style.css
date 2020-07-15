@@ -215,16 +215,6 @@ aside #nav-chat #search-bar>a {
 
 /* INIZIO MAIN */
 
-/* #main-chat {
-    height: 100vh;
-    width: 70%;
-    padding-top: 100px;
-    float: right;
-    background-image: url(../img/sfondo\ whatsup.jpg);
-    display: none;
-    justify-content: center;
-} */
-
 .main-chat-user {
     height: 100vh;
     width: 70%;
@@ -308,10 +298,6 @@ aside #nav-chat #search-bar>a {
     color: red;
     cursor: pointer;
     display: none;
-}
-
-.delete-msg.active {
-    display: block;
 }
 
 #my-message {

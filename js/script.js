@@ -1,13 +1,9 @@
 function init() {
-    var time = $('#chat .msg');
-    time.find('.hours').append(getActualHours());
     $('#invio').click(sendMessage);
     $('#user-msg').keyup(inputControl);
-    $('.user-item').click(chooseAvatar);
+    $('.user-item').click(chooseChat);
     nameFind();
-    $('#my-answer').on('click', '.msg', function () {
-        $('.delete-msg').addClass('active');
-     });
+    deleteMessage();
 }
 // function
 
@@ -47,22 +43,6 @@ function nameFind(){
     }
 }
 
-// SOLUZIONE GIOVANNI sul findName
-// function nameF() {
-//     var input = $(this);
-//     var txt = input.val();
-//     var contacts = $('.contacts .contact');
-//     contacts.each(function(){
-//         var contact = $(this);
-//         var name = contact.find('.contact-name').text();
-//         if (name.toLowerCase().includes(txt.toLowerCase())) {
-//             contact.show();
-//         } else {
-//             contact.hide();
-//         }
-//     });
-// }
-
 function inputControl() {
     var userInput = $('#user-msg').val();
     var iconGo = $('#icon-go');
@@ -79,7 +59,7 @@ function inputControl() {
     }
 }
 
-function chooseAvatar() {
+function chooseChat() {
     $('.user-item').removeClass('active');
     $(this).addClass('active'); 
     $('#main-user-info h3').remove();
@@ -92,10 +72,13 @@ function chooseAvatar() {
     $($('.main-chat-user').get($('.user-item.active').index())).addClass('active');
 }
 
-// function deleteMessage() {
-//     $('#my-answer').on('click', '.msg', function () {
-//        $('.delete-msg').slideToggle();
-//     });
-// }
+function deleteMessage() {
+    $(document).on('click', '.msg', function () {
+        $(this).find('.delete-msg').slideToggle();
+    });
+    $(document).on('click', '.delete-msg', function () {
+        $(this).parent('.msg').remove();
+    });
+}
 
 $(document).ready(init);
