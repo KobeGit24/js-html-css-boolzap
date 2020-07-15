@@ -33,17 +33,6 @@ a {
     padding: 0 20px;
 }
 
-#chat-name p:first-of-type {
-    padding: 5px;
-    font-size: 20px;
-    font-weight: 600;
-}
-#chat-name p:last-of-type {
-    padding: 5px;
-    font-size: 14px;
-    color: rgb(68, 68, 68);
-}
-
 .avatar-img > img {
     height: 70px;
     width: 70px;
@@ -85,7 +74,7 @@ a {
 
 .h-icon > a {
     margin: 12px;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(68, 68, 68);
 }
 
@@ -113,7 +102,7 @@ a {
 }
 
 .notifiche .notifiche-icon>i {
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .notifiche .attiva-not {
@@ -128,10 +117,12 @@ a {
 }
 
 .notifiche .attiva-not span {
+    font-size: 14px;
     font-weight: 600;
 }
 
 .notifiche .attiva-not a {
+    font-size: 12px;
     color: rgb(68, 68, 68);
     text-decoration: underline;
 }
@@ -163,7 +154,7 @@ aside #nav-chat #search-bar>a {
  
  aside #nav-chat #search-bar input {
     width: 70%;
-    font-size: 14px;
+    font-size: 13px;
     border:none;
     padding: 4px 10px;
 } 
