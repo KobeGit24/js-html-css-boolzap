@@ -159,6 +159,7 @@ aside #nav-chat #search-bar>a {
     font-size: 13px;
     border:none;
     padding: 4px 10px;
+    outline:none;
 } 
 
 #user-list {
@@ -324,6 +325,7 @@ aside #nav-chat #search-bar>a {
     font-size: 14px;
     border: none;
     border-radius: 50%;
+    outline:none;
 } 
 
 .f-icon .fa-microphone.hidden {

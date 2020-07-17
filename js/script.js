@@ -56,10 +56,10 @@ function inputControl() {
     var userInput = $('#user-msg').val();
     var iconGo = $('#icon-go');
     var iconPhone = $('#icon-phone');
-    if (event.which==13 && userInput.length > 0 && userInput != " ") {
+    if (event.which==13 && userInput.length > 0 && userInput.trim() != "") {
         sendMessage();
     }
-    if (userInput.length > 0 && userInput != " ") {
+    if (userInput.length > 0 && userInput.trim() != "") {
         iconGo.addClass('active');
         iconPhone.addClass('hidden');
     } else {
